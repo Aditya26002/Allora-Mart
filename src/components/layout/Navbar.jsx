@@ -1,5 +1,6 @@
 import React from "react";
-import Logo from "./Logo";
+import { NavLink } from "react-router-dom";
+import Logo from "../ui/Logo";
 import { MdAccountCircle, MdFavoriteBorder, MdOutlineSearch, MdOutlineShoppingCart } from "react-icons/md";
 
 const Navbar = () => {
@@ -10,9 +11,30 @@ const Navbar = () => {
           <Logo />
         </div>
         <div className="flex gap-8 font-semibold cursor-pointer select-none">
-          <div className="border-b-2 border-neutral-400">Home</div>
-          <div className="border-b-2 border-white">Contact</div>
-          <div className="border-b-2 border-white">About</div>
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              `border-b-2 ${isActive ? "border-neutral-400" : "border-white"}`
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              `border-b-2 ${isActive ? "border-neutral-400" : "border-white"}`
+            }
+          >
+            Contact
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              `border-b-2 ${isActive ? "border-neutral-400" : "border-white"}`
+            }
+          >
+            About
+          </NavLink>
         </div>
         <div className="flex gap-6 items-center">
           <div className="bg-gray-100 flex items-center gap-2 rounded-md px-5">
