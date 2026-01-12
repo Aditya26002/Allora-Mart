@@ -31,7 +31,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col items-start gap-2">
           <p className="font-semibold text-lg mb-2">Support</p>
-          <p className="text-sm wrap-break-word">
+          <p className="text-sm w-52 wrap-break-word text-start">
             Suite 678 755 Leigha Light, Mabelberg, AZ 37784-9326
           </p>
           <p className="text-sm">alloramart@gmail.com</p>
